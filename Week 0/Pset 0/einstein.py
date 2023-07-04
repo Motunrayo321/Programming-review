@@ -3,7 +3,7 @@
 def main():
     mass = int(input("Hit me with that weight! "))
     energy = mass * ((3 * 10**8) ** 2)
-    print (energy)
+    print (f"{energy}J")
 
 main()
 

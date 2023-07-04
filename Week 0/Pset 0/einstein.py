@@ -5,6 +5,7 @@ def main():
     energy = mass * ((3 * 10**8) ** 2)
     print (f"{energy}J")
 
+
 main()
 
 # On my way to becoming a master of relativity...

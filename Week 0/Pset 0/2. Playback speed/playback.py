@@ -5,6 +5,7 @@ def main():
     slowmo = fastmo.replace(" ", "...")
     print (slowmo)
 
+
 main()
 
 # Glad that's over. Hawks way >>>

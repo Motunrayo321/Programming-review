@@ -5,3 +5,5 @@ def main():
     print (whisper)
 
 main()
+
+# Come closer, lemme tell ya something...

@@ -12,3 +12,5 @@ def revolution(emoticon):
     return emoji2
 
 main()
+
+# Lucky to be born in the twenty first century!

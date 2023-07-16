@@ -22,17 +22,18 @@ def alpha(s):
             return True
 
 '''
-cs
-cs50
-cs5p
-csp50
-csp5p
-csp500
-csp50w
+cs Y
+cs50 Y
+cs5p N
+csp50 Y
+csp5p N
+csp500 Y
+csp50w N
 '''
 
 def end(s):
     n = s[:1:-1]
+    m = s[2:]
     count = len(n)
     flag = False
 
@@ -48,18 +49,23 @@ def end(s):
 
         if count == 3:
             if n[1].isdigit():
-                flag = True
+                if n[2].isdigit and n[2] != 0:
+                    flag == True
+
 
         if count == 4:
             if n[1].isdigit():
                 if n[2].isdigit():
-                    flag = True
-                else:
-                    if n[3].isalpha():
+                    if n[3] != 0:
                         flag = True
 
+                else:
+                    if n[2] != 0 and n[3].isalpha():
+                        flag = True
+                    
+
             else:
-                if n[2:].isalpha():
+                if n[1] != 0 and n[2:].isalpha():
                     flag = True
     
     print (flag)

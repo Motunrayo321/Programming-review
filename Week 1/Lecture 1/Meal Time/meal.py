@@ -6,17 +6,17 @@ def main():
     else:
         converted_time = convert(time)
 
-    hour, minutes = converted_time.split('.')
+    #hour, minutes = converted_time.split('.')
+    #print (type(converted_time))
 
-    match hour:
-        case '7':
-            print ("Time for breakfast")
-        case '12':
-            print ("Time for lunch")
-        case '18':
-            print ("Time for dinner")
-        case _:
-            print ("It's not time for any meal!")
+    if 7.0 <= converted_time <= 8.0:
+        print ("Time for breakfast")
+    elif 12.0 <= converted_time <= 13.0:
+        print ("Time for lunch")
+    elif 18.0 <= converted_time <= 19.0:
+        print ("Time for dinner")
+    else:
+        print ("It's not time for any meal!")
 
 
 def convert(time):
@@ -24,8 +24,8 @@ def convert(time):
     minute = int(minute)
     hour = int (hour)
 
-    decimal = (f"{hour + (minute/60)}")
-    print (decimal)
+    decimal = hour + (minute/60)
+    #print (f"1 {decimal}")
     return decimal
 
 def new_convert (time):
@@ -37,8 +37,8 @@ def new_convert (time):
     if meridian == 'p.m.':
         hour += 12
 
-    decimal = (f"{hour + (minute/60)}")
-    print (decimal)
+    decimal = hour + (minute/60)
+    #print (f"2 {decimal}")
     return decimal
 
 

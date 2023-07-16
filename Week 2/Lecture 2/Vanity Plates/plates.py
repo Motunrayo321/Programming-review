@@ -37,7 +37,7 @@ def end(s):
     flag = False
 
     if n[0].isalpha():
-        flag = n[1:].alpha()
+        flag = n[1:].isalpha()
     if n[0].isdigit():
 
         if count == 1:

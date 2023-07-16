@@ -61,18 +61,26 @@ def end(s):
             elif n[1].isalpha():
                 if n[2:].isalpha():
                     flag = True
-                    
+    
+    print (flag)
 
 '''
-            csppp0
-            cspp00
-            cs5p00
-
-            csp500
-            csp5p0
-            csp500
-            cs5500
-            cs5500
+            cspppp Y
+            csppp0 Y
+            cspp0p N
+            csp0pp N
+            cs0ppp N
+            cspp00 Y
+            csp00p N
+            cs00pp N
+            csp0p0 N
+            cs0pp0 N
+            cs0p0p N
+            csp000 Y
+            cs000p N
+            cs00p0 N
+            cs0p00 N
+            cs0000 Y
 
 
     count = len(n)
@@ -98,5 +106,5 @@ def end(s):
 ''' 
     
 
-
-end("csp50")
+while True:
+    end(input("Plate Number: "))

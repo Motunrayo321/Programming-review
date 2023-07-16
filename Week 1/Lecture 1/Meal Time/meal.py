@@ -6,8 +6,6 @@ def main():
     else:
         converted_time = convert(time)
 
-    #hour, minutes = converted_time.split('.')
-    #print (type(converted_time))
 
     if 7.0 <= converted_time <= 8.0:
         print ("Time for breakfast")
@@ -25,8 +23,8 @@ def convert(time):
     hour = int (hour)
 
     decimal = hour + (minute/60)
-    #print (f"1 {decimal}")
     return decimal
+
 
 def new_convert (time):
     time_stamp, meridian = time.split(' ')
@@ -38,7 +36,6 @@ def new_convert (time):
         hour += 12
 
     decimal = hour + (minute/60)
-    #print (f"2 {decimal}")
     return decimal
 
 

@@ -6,9 +6,7 @@ def main():
     twt = ''
 
     for i in tweet:
-        if i.lower() in vowel:
-            pass
-        else:
+        if i.lower() not in vowel:
             twt += i.lower()
 
     print (f"Tweet: {twt}")

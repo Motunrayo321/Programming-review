@@ -34,6 +34,48 @@ csp50w
 def end(s):
     n = s[:1:-1]
     count = len(n)
+    flag = False
+
+    if n[0].isalpha():
+        flag = n[1:].alpha()
+    if n[0].isdigit():
+
+        if count == 1:
+            flag = True
+
+        if count == 2:
+            flag = True
+
+        if count == 3:
+            if n[1].isdigit():
+                flag = True
+
+        if count == 4:
+            if n[1].isdigit():
+                if n[2].isdigit():
+                    flag = True
+                elif n[2].isalpha():
+                    if n[3].isalpha():
+                        flag = True
+
+            elif n[1].isalpha():
+                if n[2:].isalpha():
+                    flag = True
+                    
+
+'''
+            csppp0
+            cspp00
+            cs5p00
+
+            csp500
+            csp5p0
+            csp500
+            cs5500
+            cs5500
+
+
+    count = len(n)
 
     f = ''
     m = ''
@@ -53,7 +95,7 @@ def end(s):
     else:
         print (False)
         return False
-            
+''' 
     
 
 

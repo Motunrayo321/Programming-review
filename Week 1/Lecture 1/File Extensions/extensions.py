@@ -30,3 +30,5 @@ def file_kind(file_name):
             return ("Invalid file format!")
 
 
+while True: 
+    main()

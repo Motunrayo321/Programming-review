@@ -54,11 +54,11 @@ def end(s):
             if n[1].isdigit():
                 if n[2].isdigit():
                     flag = True
-                elif n[2].isalpha():
+                else:
                     if n[3].isalpha():
                         flag = True
 
-            elif n[1].isalpha():
+            else:
                 if n[2:].isalpha():
                     flag = True
     
@@ -81,28 +81,6 @@ def end(s):
             cs00p0 N
             cs0p00 N
             cs0000 Y
-
-
-    count = len(n)
-
-    f = ''
-    m = ''
-    
-    while count > 1:
-        for i in n:
-            if i.isalpha():
-                f += i
-            elif i.isdigit():
-                m += i
-            print ('1')
-            
-            count -= 1
-    if f == n or m == n:
-        print (True)
-        return True
-    else:
-        print (False)
-        return False
 ''' 
     
 

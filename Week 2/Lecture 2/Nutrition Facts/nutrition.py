@@ -1,6 +1,8 @@
 def main():
     fruit = input("Which fruit would you like to check? ").lower()
-    print (f"{fruit}: {calorie_check(fruit)} kcal")
+
+    if calorie_check(fruit):
+        print (f"{fruit}: {calorie_check(fruit)} kcal")
 
 def calorie_check(fruit):
 

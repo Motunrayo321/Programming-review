@@ -116,15 +116,8 @@ def length(s):
 def first_two_alpha(s):
     flag = False
 
-    count = 0
-    for i in s:
-        print (i)
-        if i.isalpha():
-            print ('1')
-            if count >= 2:
-                print ('2')
-                flag = True
-                break
+    if s[:2].isalpha():
+        flag = True
 
     return flag
 
@@ -134,6 +127,10 @@ def end(s):
     n = s[:1:-1]
     m = s[2:]
     count = len(n)
+
+    if len(s) < 3:
+        flag = True
+        return flag
 
     if n[0].isalpha():
         flag = n[1:].isalpha()

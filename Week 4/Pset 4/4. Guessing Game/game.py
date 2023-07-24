@@ -1,14 +1,19 @@
 from random import randrange
 
 def main():
-    guess = int(input("What is your guess? "))
-
-def game(guess):
+    guess = ''
     num = randrange(10)
 
-    if guess < num:
-        print ("Too low.")
-    elif guess > num:
-        print ("Too high.")
-    elif guess == num:
-        print ("You got it!")
+    while guess != num:
+        guess = int(input("What is your guess? "))
+
+        if guess < num:
+            print ("Too low.")
+        elif guess > num:
+            print ("Too high.")
+        elif guess == num:
+            print ("You got it!")
+
+    print ("Congratulations!")
+
+main()

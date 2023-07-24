@@ -8,12 +8,11 @@ def main():
         guess = int(input("What is your guess? "))
 
         if guess < num:
-            print ("Too low.")
+            print ("Too small!")
         elif guess > num:
-            print ("Too high.")
+            print ("Too large!")
         elif guess == num:
-            print ("You got it!")
+            print ("Just right!")
 
-    print ("Congratulations!")
 
 main()

@@ -5,20 +5,17 @@ def main():
     count = 0
     level = get_level()
     print (f"Level: {level}")
-    
 
     while count < 10:
         num1 = generate_integer(level)
         num2 = generate_integer(level)
 
         question = num1 + num2
-        #print (question)
         answer = int(input(f"{num1} + {num2} = "))
 
         counter = 1
         while answer != question and counter < 3:
             print ("EEE")
-            #print (f"Counter: {counter}")
             counter += 1
             answer = int(input(f"{num1} + {num2} = "))
         
@@ -46,6 +43,8 @@ def generate_integer(level):
         num = randrange(999)
 
     return num
+
+
 
 if __name__ == "__main__":
     main()

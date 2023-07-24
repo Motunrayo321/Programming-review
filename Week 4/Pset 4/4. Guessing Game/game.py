@@ -1,24 +1,32 @@
 from random import randrange
 
 def main():
-    n = -1 
+    limit = -1 
 
-    while type(n) != int and n < 0:
-        limit = int(input("What is the level of this game? "))
+    while limit < 1:
+        try:
+            limit = int(input("What is the level of this game? "))
+        except ValueError:
+            print ("Please input a positive integer!")
 
     guess = ''
     num = randrange(limit)
 
-    while guess != num:
-        guess = int(input("What is your guess? "))
+    while guess != limit:
+        try:
+            guess = int(input("What is your guess? "))
+            print (game(guess, limit))
+        except ValueError:
+            print ("Please input a positive integer!")
+    
 
-        if guess < num:
-            print ("Too small!")
-        elif guess > num:
-            print ("Too large!")
-        elif guess == num:
-            print ("Just right!")
+def game(guess, num):
 
-
+    if guess < num:
+        return ("Too small!")
+    elif guess > num:
+        return ("Too large!")
+    elif guess == num:
+        return ("Just right!")
 
 main()

@@ -7,8 +7,8 @@ def main():
         num = sys.argv[1]
 
         value = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-        real_value = json.dumps(value.json(), indent='2')
-        
+        real_value = value.json()
+
         print (real_value)
 
     except ValueError:

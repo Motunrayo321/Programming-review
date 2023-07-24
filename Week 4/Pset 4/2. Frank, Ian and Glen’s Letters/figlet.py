@@ -5,7 +5,6 @@ from pyfiglet import Figlet
 
 
 def main():
-    #print (len(sys.argv))
 
     if len(sys.argv) == 1:
         print (fonts(text, None))
@@ -26,9 +25,6 @@ def fonts(text, type):
 
     if not type:
         type = random.choice(font_list)
-    
-    #print (font_list, '\n')
-    #print (type)
 
     figlet.setFont(font=type)
 

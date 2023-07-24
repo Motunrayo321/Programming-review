@@ -21,7 +21,7 @@ def check_price(currency):
         total = json.dumps(value.json(), indent=2)
         real_value = float(value.json()['bpi'][currency]['rate_float'])
 
-        print (total)
+        #print (total)
         #print (real_value)
         return real_value
 

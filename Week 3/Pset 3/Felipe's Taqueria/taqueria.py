@@ -1,4 +1,5 @@
 def main():
+    
     order = input("Enter your order: ").title()
     cost = 0
 

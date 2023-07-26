@@ -6,21 +6,25 @@ import sys
 def main():
     argv_check('csv')
 
+    header = ['Sicilian Pizza', 'Small' ,'Large']
+
     file_name = sys.argv[1]
-    table = file_table(file_name)
+    table = file_table(file_name, header)
 
-    print (table)
+    #print (tabulate(table, headers=header))
 
-def file_table(file_name):
+def file_table(file_name, header):
     actual_file = []
 
     with open(file_name, 'r') as file:
-        reader = csv.DictReader(file, fieldnames=['Sicilian Pizza', 'Small' ,'Large'])
+        reader = csv.DictReader(file, fieldnames=header)
 
         for line in reader:
-            actual_file.append(line)
+            actual_file.append(f"{line['Sicilian Pizza']}, {line['Small']}, {line['Large']}")
 
+    print (actual_file)
     return actual_file
 
-    
-main()
+
+if __name__ == "__main__":
+    main()

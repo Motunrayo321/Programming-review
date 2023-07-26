@@ -41,13 +41,13 @@ def file_write(array, new_file, header):
         cur_file.append(cur_dict)
     
     #print ()
-    print (json.dumps(cur_file, indent=2))
+    #print (json.dumps(cur_file, indent=2))
 
     with open(new_file, 'a') as file:
         writer = csv.DictWriter(file, fieldnames=header)
 
         for item in cur_file:
-            #print (item)
+            print (item)
             writer.writerow(item)
 
 

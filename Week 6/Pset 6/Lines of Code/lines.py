@@ -26,7 +26,7 @@ def line_check(file_name):
             if line and not line.startswith('#'):
                 actual_file.append(line)
     
+    print (json.dumps(actual_file, indent=2))
     return(actual_file)
-
 
 main()

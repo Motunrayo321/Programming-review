@@ -11,7 +11,7 @@ def main():
     file_name = sys.argv[1]
     table = file_table(file_name, header)
 
-    #print (tabulate(table, headers=header))
+    print (tabulate(table, headers='firstrow', tablefmt='grid'))
 
 def file_table(file_name, header):
     actual_file = []
@@ -20,9 +20,10 @@ def file_table(file_name, header):
         reader = csv.DictReader(file, fieldnames=header)
 
         for line in reader:
-            actual_file.append(f"{line['Sicilian Pizza']}, {line['Small']}, {line['Large']}")
-
+            actual_file.append(line)
+            
     print (actual_file)
+
     return actual_file
 
 

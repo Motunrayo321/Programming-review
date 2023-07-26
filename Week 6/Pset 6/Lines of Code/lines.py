@@ -1,7 +1,17 @@
 import sys
+import json
 
 def main():
+    if len(sys.argv) < 2:
+        sys.exit("Too few arguments")
+    elif len(sys.argv) > 2:
+        sys.exit("Too many arguments")
+
     file_name = sys.argv[1]
+
+    if not file_name.endswith('.py'):
+        sys.exit("Not a Python file")
+
     file = line_check(file_name)
     
     print (len(file))
@@ -15,7 +25,7 @@ def line_check(file_name):
             
             if line and not line.startswith('#'):
                 actual_file.append(line)
-        
+    
     return(actual_file)
 
 

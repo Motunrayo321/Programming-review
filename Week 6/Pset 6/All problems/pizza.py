@@ -3,26 +3,34 @@ from tabulate import tabulate
 import csv
 import sys
 
+
 def main():
-    argv_check('csv')
+    argv_check('csv', 1)
 
     header = ['Sicilian Pizza', 'Small' ,'Large']
 
     file_name = sys.argv[1]
-    table = file_table(file_name, header)
+    table = file_return(file_name, header)
 
     print (tabulate(table, headers='firstrow', tablefmt='grid'))
+    
 
-def file_table(file_name, header):
+
+def file_return(file_name, header):
     actual_file = []
 
-    with open(file_name, 'r') as file:
-        reader = csv.DictReader(file, fieldnames=header)
+    try:
+        with open(file_name, 'r') as file:
+            reader = csv.DictReader(file, fieldnames=header)
+            #print (reader)
 
-        for line in reader:
-            actual_file.append(line)
+            for line in reader:
+                actual_file.append(line)
+        
+    except FileNotFoundError:
+        sys.exit("This file does not exist in this directory!")
             
-    print (actual_file)
+    #print (actual_file)
 
     return actual_file
 

@@ -10,13 +10,15 @@ def line_check(file_name):
     actual_file = []
 
     with open(file_name, 'r') as file:
-        for line in file:
-            print (line)
+        for line in file.readlines():
+            #print (line)
             line = line.strip()
             
             if line and not line.startswith('#'):
-                print (line)
-                return(line)
+                actual_file.append(line)
+                #print (line)
+        
+    return(actual_file)
 
 
 main()

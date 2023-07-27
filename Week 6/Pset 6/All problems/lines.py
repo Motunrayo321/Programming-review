@@ -17,7 +17,7 @@ def argv_check(file_type:list, file_no:int, all_file=False, location=1):
     all_file should be true if all the files should have one of the extensions listed in the list
     location should be given if only all_file is false to know which file(s) to check its extension
     """
-    
+
     arguments = sys.argv
 
     # Checking command line file numbers
@@ -43,14 +43,10 @@ def argv_check(file_type:list, file_no:int, all_file=False, location=1):
     # If files should be of the same type...
 
     if all_file:
-        #print (arguments[1:])
         for i in arguments[1:]:
-            #print (i)
             file_name, file_path = path.splitext(i)
             mark, file_path = file_path.split('.')
-            #print (file_name, file_path)
-            #print (file_type[1:])
-            #print(f"\n.{file_type[1:]}")
+
             if not file_path in file_type[1:]:
                 sys.exit(f"2. Not a {ext.title()} file")
 

@@ -40,5 +40,4 @@ def file_return(file_name, over_file, new_file):
         sys.exit("This file does not exist in this directory!")
 
 
-if __name__ == "__main__":
-    main()
+main ()

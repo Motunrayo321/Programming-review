@@ -6,8 +6,8 @@ def main():
     print(count(input("Text: ")))
 
 
-def count(s):
-    if match := re.findall(r"\bum\b", s, re.IGNORECASE):
+def count(text):
+    if match := re.findall(r"\bum\b", text, re.IGNORECASE):
         return (len(match))
 
 

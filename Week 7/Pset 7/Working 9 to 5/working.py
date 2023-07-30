@@ -28,7 +28,7 @@ def convert(s):
     ((([1][0-2])|([0]?[1-9]))(:([0-5][0-9]))? ([AM|PM]))
 
     """
-    if match := re.search(r"^((([1][0-2])|([0]?[1-9]))(:([0-5][0-9]))? (AM|PM))$", s, re.IGNORECASE):
+    if match := re.search(r"^(((?:[1][0-2])|(?:[0]?[1-9]))(?::([0-5][0-9]))? (AM|PM))$", s, re.IGNORECASE):
         return (match.groups())
 
 

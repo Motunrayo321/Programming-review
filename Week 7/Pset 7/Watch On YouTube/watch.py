@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if match := re.search(r"https?://(?:www\.)?youtube.com/embed(\w*)", s):
+    if match := re.search(r"https?://(?:www\.)?youtube.com/embed/(\w+)", s):
         url = match.group(1)
         return f"https://youtu.be/{url}"
 

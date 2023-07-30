@@ -1,5 +1,4 @@
 import re
-import sys
 
 
 def main():
@@ -9,13 +8,16 @@ def main():
 
 def convert(s):
     """
+    Hour
     ([0-1][0-2])
     # ((?:[0-1][0-2]){2})
     ([0]?[0-9])
     #([0-1]?[0-9]{1})
 
+    Hour combination
     (([1][0-2])|([0]?[1-9]))
 
+    Minutes
     ([0-5]?[0-9])
     ([0-5][0-9])
     (:[0-5]?[0-9])
@@ -23,12 +25,15 @@ def convert(s):
     # ([6][0]) Unnecessary
     #(([6][0]){2})
 
+    Meridian
     # [AM|PM] incorrect
     (AM|PM)
 
+    First full expression
     ((([1][0-2])|([0]?[1-9]))(:([0-5][0-9]))? ([AM|PM]))
 
     """
+
     if match := re.search(r"^(((?:[1][0-2])|(?:[0]?[1-9]))(?::([0-5][0-9]))? (AM|PM)) to (((?:[1][0-2])|(?:[0]?[1-9]))(?::([0-5][0-9]))? (AM|PM))$", s, re.IGNORECASE):
         
         start, end = match.group(1), match.group(5)
@@ -44,11 +49,6 @@ def convert(s):
             'minute': match.group(7),
             'period': match.group(8)
             }
-
-        print (f"{start} - {end}\n")
-        print (start_dets)
-        print (end_dets)
-        print ()
 
         final = output ([start_dets, end_dets])
         return final
@@ -67,7 +67,6 @@ def output(working_time):
     end = working_time[1]
 
     return (f"{start['hour']}:{start['minute']} to {end['hour']}:{end['minute']}")
-
 
 
 while True:

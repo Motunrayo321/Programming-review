@@ -13,6 +13,10 @@ class Student():
         print(self.name, self.house)
         print (self)
 
-student = Student("Motun", "Shobande")
-student.call()
-print (student)
+def main():
+    student = Student("Motun", "Shobande")
+    student.name = 'Homie'
+    student.call()
+    print (student)
+
+main()
